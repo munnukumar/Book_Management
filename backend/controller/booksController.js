@@ -5,7 +5,7 @@ const ApiFeatures = require("../utils/apifeatures")
 
 
 
-//Create products
+//ADD BOOKS
 exports.addBooks = catchAsyncError(async (req, res, next) => {
     const booksData = req.body;
     const book = await Book.create(booksData);
@@ -16,7 +16,7 @@ exports.addBooks = catchAsyncError(async (req, res, next) => {
     })
 });
 
-//get All products
+//get All BOOKS
 
 exports.getAllBooks = catchAsyncError(async (req, res) => {
 
@@ -67,7 +67,7 @@ exports.updateBook = catchAsyncError(async (req, res, next) => {
     })
 });
 
-//Delete Products
+//Delete Book
 
 exports.deleteBook = catchAsyncError(async (req, res, next) => {
     const bookData = await Book.findById(req.params.id);
